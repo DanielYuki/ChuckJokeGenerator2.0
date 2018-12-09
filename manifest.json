@@ -1,0 +1,17 @@
+{
+  "name": "Chuck Norris Joke Generator",
+  "short_name": "ChuckJokes",
+  "description": "WebApp using the ChuckNorrisJokeAPI",
+  "icons": [
+    {
+      "src": "img/imagem.png",
+      "sizes": "XxX",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/index.html",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#FFFFFF",
+  "theme_color": "#FFFFFF"
+}
