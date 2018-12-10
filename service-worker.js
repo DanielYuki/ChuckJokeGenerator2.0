@@ -3,10 +3,10 @@ let cacheName = 'ChuckJoke-v1';
 
 // CACHE DE ARQUIVOS
 let filesToCache = [
-    '/',
-    '/index.html',
-    '/main.js',
-    '/main.css'
+    './',
+    './index.html',
+    './main.js',
+    './main.css'
 ];
 
 self.addEventListener('install', function(event) {

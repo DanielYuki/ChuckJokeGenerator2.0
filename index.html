@@ -16,32 +16,46 @@
     <meta name="apple-mobile-web-app-title" content="ChuckJokes">
     <link rel="apple-touch-icon" href="img/imagem.png">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="main.js" defer></script>
 
 </head>
 
 <body>
+    <header>
+        <div>
+            <div>
+                <h1>CHUCK NORRIS</h1>
+                <h3>JOKES GENERATOR</h3>
+            </div>
+            <div class="showSelection">
+                <i class="fa fa-angle-down fa-3x" aria-hidden="true"></i>
+            </div>
+        </div>
+        <aside>
+            <select name="Categories" class="categories">
+                <option value="" disabled selected>Categories</option>
+                <option value="explicit">Random</option>
+                <option value="dev">Dev</option>
+                <option value="movie">Movie</option>
+                <option value="food">Food</option>
+                <option value="celebrity">celebrity</option>
+                <option value="science">science</option>
+                <option value="sport">sport</option>
+                <option value="political">political</option>
+                <option value="religion">religion</option>
+                <option value="animal">animal</option>
+                <option value="history">history</option>
+                <option value="music">music</option>
+                <option value="travel">travel</option>
+                <option value="career">career</option>
+                <option value="money">money</option>
+                <option value="fashion">fashion</option>
+            </select>
+        </aside>
+    </header>
     <section>
-        <select name="Categories" class="categories">
-            <option value="" disabled selected>Categories</option>
-            <option value="explicit">Random</option>
-            <option value="dev">Dev</option>
-            <option value="movie">Movie</option>
-            <option value="food">Food</option>
-            <option value="celebrity">celebrity</option>
-            <option value="science">science</option>
-            <option value="sport">sport</option>
-            <option value="political">political</option>
-            <option value="religion">religion</option>
-            <option value="animal">animal</option>
-            <option value="history">history</option>
-            <option value="music">music</option>
-            <option value="travel">travel</option>
-            <option value="career">career</option>
-            <option value="money">money</option>
-            <option value="fashion">fashion</option>
-        </select>
         <div class="test"></div>
         <div class="jukes"></div>
         <button class="generate">Generate</button>

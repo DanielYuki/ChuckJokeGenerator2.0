@@ -1,6 +1,9 @@
 //DE PREFERÊNCIA, DEIXE O SERVICE WORKER NO FINAL DO ARQUIVO.JS
 let generate = document.querySelector('.generate');
 
+let showSelection = document.querySelector('.showSelection');
+let selectBar = document.querySelector('aside');
+
 const mainUrl = 'https://api.chucknorris.io/jokes/random?';
 
 // ES6
@@ -78,10 +81,14 @@ generate.onclick = () => {
     generateJoke(categoryUrl);
 }
 
+showSelection.onclick = () => {
+    selectBar.classList.toggle('showHide');
+}
+
 // Registra o service worker
 if ('serviceWorker' in navigator) {
     navigator.serviceWorker
-        .register('./service-worker.js')
+        .register('service-worker.js')
         .then(function () {
             console.log('Service Worker Registered');
         }, function (error) {
