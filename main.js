@@ -82,6 +82,7 @@ generate.onclick = () => {
 }
 
 showSelection.onclick = () => {
+    showSelection.classList.toggle('rotate');
     selectBar.classList.toggle('showHide');
 }
 
