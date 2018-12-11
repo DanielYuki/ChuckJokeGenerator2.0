@@ -10,6 +10,14 @@ body{
 
 h1,h2,h3,h4,h5,h6{
     margin: 0;
+    font-family: sans-serif;
+    font-style: normal;
+    text-shadow: 0 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+h1, .showSelection{
+    color: #FFC400;
+    /* color: gold; */
 }
 
 header{
@@ -19,7 +27,7 @@ header{
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    background: linear-gradient(90deg,#d5a155 60%,#aa8044);
+    background: linear-gradient(90deg,#d5a155 60%,#aa8044ab);
     box-shadow: 0px 10px 20px 2px rgba(0,0,0,0.25);
 }
 
@@ -40,18 +48,16 @@ aside{
     align-items: center;
     opacity: 0;
     transition: ease-out 0.35s;
+    border-top: 0.25px solid rgba(0, 0, 0, 0.25);
+}.showHide{
+    height: 7.5vh;
+    opacity: 1;
 }
 
 .showSelection{
     transition: 0.35s ease-out;
-}
-.rotate{
+}.rotate{
     transform: rotate(180deg);
-}
-
-.showHide{
-    height: 7.5vh;
-    opacity: 1;
 }
 
 section{
@@ -65,10 +71,11 @@ section{
 }
 
 aside select{
-    width: 50%; 
-    border: solid yellow 1px;
+    width: 50%;
+    height: 65%;
+    border: solid yellow 2px;
     background-color: transparent;
-    border-radius: 5px;
+    border-radius: 10px;
     font-size: 12pt;
     color: white;
     font-weight: bolder;
@@ -76,4 +83,81 @@ aside select{
 
 select > option{
     background-color: #aa8044;
+    font-weight: bold;
 }
+
+button{
+    position: absolute;
+    bottom: 5vh;
+    letter-spacing: 3px;
+    padding: 7.5px 15px;
+    border: solid yellow 2.5px;
+    background-color: transparent;
+    border-radius: 10px;
+    font-size: 20pt;
+    color: white;
+    font-weight: bolder;
+}
+
+
+
+.loadingAni {
+    display: inline-block;
+    position: relative; 
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+  .loadingAni div {
+    position: absolute;
+    top: 27px;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: #fff;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+  }
+  .loadingAni div:nth-child(1) {
+    left: 6px;
+    animation: loadingAni1 0.6s infinite;
+  }
+  .loadingAni div:nth-child(2) {
+    left: 6px;
+    animation: loadingAni2 0.6s infinite;
+  }
+  .loadingAni div:nth-child(3) {
+    left: 26px;
+    animation: loadingAni2 0.6s infinite;
+  }
+  .loadingAni div:nth-child(4) {
+    left: 45px;
+    animation: loadingAni3 0.6s infinite;
+  }
+
+
+  @keyframes loadingAni1 {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes loadingAni3 {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+  @keyframes loadingAni2 {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(19px, 0);
+    }
+  }
+  

@@ -55,7 +55,7 @@ async function generateJoke(categoryUrl) {
     let jukes = document.querySelector('.jukes');
 
     jukes.innerHTML = ""
-    loading.textContent = "Generating..."
+    loading.innerHTML = '<div class="loadingAni"><div></div><div></div><div></div><div></div></div>'
     console.log('Loading...');
     try {
         let waitJoke = await fetch(`${mainUrl}${categoryUrl}`);

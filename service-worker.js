@@ -1,5 +1,5 @@
 // NOME DO CACHE
-let cacheName = 'ChuckJoke-v1';
+let cacheName = 'ChuckJoke-v2';
 
 // CACHE DE ARQUIVOS
 let filesToCache = [
