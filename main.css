@@ -48,7 +48,6 @@ aside{
     align-items: center;
     opacity: 0;
     transition: ease-out 0.35s;
-    border-top: 0.25px solid rgba(0, 0, 0, 0.25);
 }.showHide{
     height: 7.5vh;
     opacity: 1;
@@ -73,7 +72,7 @@ section{
 aside select{
     width: 50%;
     height: 65%;
-    border: solid yellow 2px;
+    border: solid #FFC400 2px;
     background-color: transparent;
     border-radius: 10px;
     font-size: 12pt;
@@ -91,7 +90,7 @@ button{
     bottom: 5vh;
     letter-spacing: 3px;
     padding: 7.5px 15px;
-    border: solid yellow 2.5px;
+    border: solid #FFC400 2.5px;
     background-color: transparent;
     border-radius: 10px;
     font-size: 20pt;
@@ -108,8 +107,8 @@ button{
     height: 64px;
     border-radius: 50%;
     background-color: rgba(0, 0, 0, 0.75);
-  }
-  .loadingAni div {
+}
+.loadingAni div {
     position: absolute;
     top: 27px;
     width: 11px;
@@ -117,47 +116,97 @@ button{
     border-radius: 50%;
     background: #fff;
     animation-timing-function: cubic-bezier(0, 1, 1, 0);
-  }
-  .loadingAni div:nth-child(1) {
+}
+.loadingAni div:nth-child(1) {
     left: 6px;
     animation: loadingAni1 0.6s infinite;
-  }
-  .loadingAni div:nth-child(2) {
+}
+.loadingAni div:nth-child(2) {
     left: 6px;
     animation: loadingAni2 0.6s infinite;
-  }
-  .loadingAni div:nth-child(3) {
+}
+.loadingAni div:nth-child(3) {
     left: 26px;
     animation: loadingAni2 0.6s infinite;
-  }
-  .loadingAni div:nth-child(4) {
+}
+.loadingAni div:nth-child(4) {
     left: 45px;
     animation: loadingAni3 0.6s infinite;
-  }
+}
 
 
-  @keyframes loadingAni1 {
+@keyframes loadingAni1 {
     0% {
       transform: scale(0);
     }
     100% {
       transform: scale(1);
     }
-  }
-  @keyframes loadingAni3 {
+}
+@keyframes loadingAni3 {
     0% {
       transform: scale(1);
     }
     100% {
       transform: scale(0);
     }
-  }
-  @keyframes loadingAni2 {
+}
+@keyframes loadingAni2 {
     0% {
       transform: translate(0, 0);
     }
     100% {
       transform: translate(19px, 0);
     }
-  }
+}
   
+
+/* SHOW MODAL IOS ONLY */
+#iosAlertBoxWebApp{
+    position: absolute;
+    bottom: -15%;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    z-index: 5;
+    opacity: 0;
+    display: none;
+}
+
+#actualContent{
+    height: 8vh;
+    width: 95vw;
+    padding: 5px;
+    font-size: 10pt;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: lightgray;
+    border-radius: 10px;
+}
+
+#iosAlertBoxWebApp i{
+    font-size: 6vh;
+    color: gray;
+    margin: 5px;
+}
+
+#triangleDown {
+    align-self: center;
+    width: 0; 
+    height: 0; 
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid lightgray;
+  }
+
+@keyframes show{
+    10%, 90%{
+        transform: translateY(-115%);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 0;
+    }
+}
