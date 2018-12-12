@@ -53,8 +53,9 @@ const mainUrl = 'https://api.chucknorris.io/jokes/random?';
 async function generateJoke(categoryUrl) {
     let loading = document.querySelector('.test')
     let jukes = document.querySelector('.jukes');
+    generate.disabled = true;
+    jukes.style.display = 'none'
 
-    jukes.innerHTML = ""
     loading.innerHTML = '<div class="loadingAni"><div></div><div></div><div></div><div></div></div>'
     console.log('Loading...');
     try {
@@ -66,13 +67,14 @@ async function generateJoke(categoryUrl) {
         console.log(jokeReady);
 
         loading.textContent = ""
+        jukes.style.display = 'flex'
         jukes.innerHTML = jokeReady.value
 
     } catch (error) {
-        loading.textContent = "An Error Ocurred... Try Again Later"
+        loading.textContent = "An Error Ocurred... Please Try Again Later"
         console.error(error);
-        console.log('Try again Later')
     }
+    generate.disabled = false;
 }
 
 generate.onclick = () => {
