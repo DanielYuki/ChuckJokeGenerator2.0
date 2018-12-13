@@ -57,6 +57,7 @@ aside{
 }
 
 .showSelection{
+    border-radius: 50%;
     transition: 0.35s ease-out;
 }.rotate{
     transform: rotate(180deg);
@@ -73,7 +74,7 @@ section{
 }
 
 aside select{
-    width: 50%;
+    width: 150px;
     height: 65%;
     border: solid #FFC400 2px;
     background-color: transparent;
@@ -99,6 +100,7 @@ button{
     font-size: 20pt;
     color: white;
     font-weight: bolder;
+    transition: 0.5s ease-out;
 }
 
 .jukes{
@@ -200,6 +202,10 @@ button{
     border-radius: 10px;
 }
 
+.btnClickd{
+    color: #FFC400;
+}
+
 #iosAlertBoxWebApp i{
     font-size: 6vh;
     color: gray;
@@ -223,5 +229,24 @@ button{
     100%{
         transform: translateY(0);
         opacity: 0;
+    }
+}
+
+@media only screen and (orientation: landscape), (min-width: 600px){
+    body{
+        background-size: 570px;
+    }
+    header div div{
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+    h1,h4{
+        font-size: 5vw;
+        margin: 0 2px;
+        text-shadow: 0 4px 0 rgba(0, 0, 0, 0.2);
+    }
+    .jukes{
+        font-size: 3vw;
     }
 }

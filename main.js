@@ -6,7 +6,7 @@ let selectBar = document.querySelector('aside');
 
 const mainUrl = 'https://api.chucknorris.io/jokes/random?';
 
-// ES6
+// solution 1
 // function generateJoke() {
 //     let loading = document.querySelector('.test')
 //     let jukes = document.querySelector('.jukes');
@@ -29,7 +29,7 @@ const mainUrl = 'https://api.chucknorris.io/jokes/random?';
 //     })
 // }
 
-//ES8 & ES6 
+//solution 2
 // async function generateJoke() {
 //     let loading = document.querySelector('.test')
 //     let jukes = document.querySelector('.jukes');
@@ -49,7 +49,7 @@ const mainUrl = 'https://api.chucknorris.io/jokes/random?';
 //     jukes.innerHTML = jokeReady.value
 // }
 
-// ES8
+// Best solution ?
 async function generateJoke(categoryUrl) {
     let loading = document.querySelector('.test')
     let jukes = document.querySelector('.jukes');
@@ -74,10 +74,12 @@ async function generateJoke(categoryUrl) {
         loading.textContent = "An Error Ocurred... Please Try Again Later"
         console.error(error);
     }
+    generate.classList.toggle('btnClickd')
     generate.disabled = false;
 }
 
 generate.onclick = () => {
+    generate.classList.toggle('btnClickd')
     let category = document.querySelector('.categories').value
     let categoryUrl = `category=${category}`
     generateJoke(categoryUrl);
