@@ -79,7 +79,7 @@ async function generateJoke(categoryUrl) {
 
 generate.onclick = () => {
     generate.classList.toggle('btnClickd')
-    let category = document.querySelector('.categories').value
+    let category = document.querySelector('#categories').value
     let categoryUrl = `category=${category}`
     generateJoke(categoryUrl);
 }
