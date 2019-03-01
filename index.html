@@ -6,8 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>ChuckJokes</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Description" content="WebApp developed by DYuki, just 4fun and self improvement">
 
-    <!-- Provê informações sobre o app e como ele se comporta quando instalado -->
+    <!--Provides some info about the webapp when instaled -->
     <link rel="manifest" href="./manifest.json">
 
     <!-- ICONS -->
@@ -28,34 +29,46 @@
     <meta name="msapplication-TileImage" content="./img/ms-icon-144x144.png">
     <meta name="theme-color" content="#bf904c">
 
-    <!-- Tags para compatibilidade em iOS -->
+    <!-- iOS compability tags -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="ChuckJokes">
 
-    <!-- SPLASH SCREEN PARA IOS -->
-    <link href="./img/iphone5_splash.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)"
+    <!-- SPLASH SCREEN 4 iOS -->
+    <link href="./img/iphone5_splash.png"
+        media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)"
         rel="apple-touch-startup-image" />
-    <link href="./img/iphone6_splash.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)"
+    <link href="./img/iphone6_splash.png"
+        media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)"
         rel="apple-touch-startup-image" />
-    <link href="./img/iphoneplus_splash.png" media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)"
+    <link href="./img/iphoneplus_splash.png"
+        media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)"
         rel="apple-touch-startup-image" />
-    <link href="./img/iphonex_splash.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)"
+    <link href="./img/iphonex_splash.png"
+        media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)"
         rel="apple-touch-startup-image" />
-    <link href="./img/iphonexr_splash.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)"
+    <link href="./img/iphonexr_splash.png"
+        media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)"
         rel="apple-touch-startup-image" />
-    <link href="./img/iphonexsmax_splash.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)"
+    <link href="./img/iphonexsmax_splash.png"
+        media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)"
         rel="apple-touch-startup-image" />
-    <link href="./img/ipad_splash.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)"
+    <link href="./img/ipad_splash.png"
+        media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)"
         rel="apple-touch-startup-image" />
-    <link href="./img/ipadpro1_splash.png" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)"
+    <link href="./img/ipadpro1_splash.png"
+        media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)"
         rel="apple-touch-startup-image" />
-    <link href="./img/ipadpro3_splash.png" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)"
+    <link href="./img/ipadpro3_splash.png"
+        media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)"
         rel="apple-touch-startup-image" />
-    <link href="./img/ipadpro2_splash.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)"
+    <link href="./img/ipadpro2_splash.png"
+        media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)"
         rel="apple-touch-startup-image" />
 
+    <!-- Font icon tag  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="main.js" defer></script>
 
@@ -73,7 +86,8 @@
             </div>
         </div>
         <aside>
-            <select name="Categories" class="categories">
+            <label for="categories" class="visuallyhidden">Categories</label>
+            <select name="categories" class="categories">
                 <option value="" disabled selected>CATEGORY 💬</option>
                 <option value="explicit">Random ❓</option>
                 <option value="dev">Dev 💻</option>

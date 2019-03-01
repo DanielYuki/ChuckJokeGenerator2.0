@@ -89,6 +89,17 @@ select > option{
     font-weight: bold;
 }
 
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}  
+
 button{
     position: absolute;
     bottom: 5vh;
@@ -115,8 +126,11 @@ button{
     box-shadow: 5px 5px 10px 1px rgba(0,0,0,0.2);
 }
 
+.btnClickd{
+    color: #FFC400;
+}
 
-
+/* loading css */
 .loadingAni {
     display: inline-block;
     position: relative; 
@@ -151,7 +165,7 @@ button{
     animation: loadingAni3 0.6s infinite;
 }
 
-
+/* loading animation */
 @keyframes loadingAni1 {
     0% {
       transform: scale(0);
@@ -202,10 +216,6 @@ button{
     border-radius: 10px;
 }
 
-.btnClickd{
-    color: #FFC400;
-}
-
 #iosAlertBoxWebApp i{
     font-size: 6vh;
     color: gray;
@@ -221,6 +231,7 @@ button{
     border-top: 20px solid lightgray;
   }
 
+/* show popup animation */
 @keyframes show{
     10%, 90%{
         transform: translateY(-115%);
@@ -232,6 +243,7 @@ button{
     }
 }
 
+/* basic media query */
 @media only screen and (orientation: landscape), (min-width: 600px){
     body{
         background-size: 570px;

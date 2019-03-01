@@ -1,4 +1,3 @@
-//DE PREFERÊNCIA, DEIXE O SERVICE WORKER NO FINAL DO ARQUIVO.JS
 let generate = document.querySelector('.generate');
 
 let showSelection = document.querySelector('.showSelection');
@@ -49,7 +48,7 @@ const mainUrl = 'https://api.chucknorris.io/jokes/random?';
 //     jukes.innerHTML = jokeReady.value
 // }
 
-// Best solution ?
+// Solution 3 :Best solution ?
 async function generateJoke(categoryUrl) {
     let loading = document.querySelector('.test')
     let jukes = document.querySelector('.jukes');
